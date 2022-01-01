@@ -2,7 +2,7 @@ package org.enset.glsid.cinema.service.implementation;
 
 import org.enset.glsid.cinema.entity.Salle;
 import org.enset.glsid.cinema.repository.SalleRepository;
-import org.enset.glsid.cinema.service.rmi.SalleServiceRmi;
+import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,7 +10,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 @Transactional
 @Service
-public class SalleServiceRmiImpl implements SalleServiceRmi {
+public class SalleServiceRmiImpl implements GeneriqueServiceRmi<Salle> {
 
     private SalleRepository salleRepository;
 

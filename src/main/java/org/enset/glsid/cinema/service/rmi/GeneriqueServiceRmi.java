@@ -11,3 +11,4 @@ public interface GeneriqueServiceRmi <T> extends Remote {
     T update(T object) throws RemoteException;
     void delete(Long id) throws RemoteException;
 }
+

@@ -4,3 +4,4 @@ import org.enset.glsid.cinema.entity.Cinema;
 
 public interface CinemaServiceRmi extends GeneriqueServiceRmi<Cinema>{
 }
+
