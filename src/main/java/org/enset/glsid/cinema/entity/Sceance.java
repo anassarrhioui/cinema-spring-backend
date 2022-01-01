@@ -1,9 +1,6 @@
 package org.enset.glsid.cinema.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.beans.Introspector;
@@ -15,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Sceance {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,4 +29,13 @@ public class Sceance {
     @ManyToOne
     private Film film;
 
+    @Override
+    public String toString() {
+        return "Sceance{" +
+                "id=" + id +
+                ", dateSceance='" + dateSceance + '\'' +
+                ", prix=" + prix +
+                ", heureSceance='" + heureSceance + '\'' +
+                '}';
+    }
 }

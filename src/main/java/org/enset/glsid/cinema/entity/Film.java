@@ -14,17 +14,18 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Film implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String titre;
-    private double duree;
+    private Double duree;
     private String realisateur;
     private String description ;
     private String photo ;
-    @Column(length = 20, nullable = false)
+    @Column(length = 20)
     private String dateSortie;
 
     @ManyToOne
@@ -33,5 +34,16 @@ public class Film implements Serializable {
     @OneToMany(mappedBy = "film")
     private List<Sceance> sceances = new ArrayList<>();
 
-
+    @Override
+    public String toString() {
+        return "Film{" +
+                "id=" + id +
+                ", titre='" + titre + '\'' +
+                ", duree=" + duree +
+                ", realisateur='" + realisateur + '\'' +
+                ", description='" + description + '\'' +
+                ", photo='" + photo + '\'' +
+                ", dateSortie='" + dateSortie + '\'' +
+                '}';
+    }
 }

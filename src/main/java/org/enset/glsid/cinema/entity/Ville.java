@@ -1,9 +1,6 @@
 package org.enset.glsid.cinema.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,6 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class Ville implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,5 +21,11 @@ public class Ville implements Serializable {
     @OneToMany(mappedBy = "ville")
     private List<Cinema> cinemas = new ArrayList<>();
 
-
+    @Override
+    public String toString() {
+        return "Ville{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
 }

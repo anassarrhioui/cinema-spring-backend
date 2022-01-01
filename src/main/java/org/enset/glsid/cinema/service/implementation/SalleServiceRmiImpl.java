@@ -4,6 +4,7 @@ import org.enset.glsid.cinema.entity.Salle;
 import org.enset.glsid.cinema.repository.SalleRepository;
 import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
 import org.enset.glsid.cinema.service.rmi.SalleServiceRmi;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +16,7 @@ public class SalleServiceRmiImpl implements SalleServiceRmi {
 
     private SalleRepository salleRepository;
 
+    @Autowired
     public SalleServiceRmiImpl(SalleRepository salleRepository){
         this.salleRepository = salleRepository ;
     }

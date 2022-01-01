@@ -3,6 +3,7 @@ package org.enset.glsid.cinema.service.implementation;
 import org.enset.glsid.cinema.entity.Sceance;
 import org.enset.glsid.cinema.repository.SceanceRepository;
 import org.enset.glsid.cinema.service.rmi.SceanceServiceRmi;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +16,7 @@ public class SceanceServiceRmiImpl implements SceanceServiceRmi {
 
     private SceanceRepository sceanceRepository;
 
+    @Autowired
     SceanceServiceRmiImpl(SceanceRepository sceanceRepository){
             this.sceanceRepository= sceanceRepository;
     }

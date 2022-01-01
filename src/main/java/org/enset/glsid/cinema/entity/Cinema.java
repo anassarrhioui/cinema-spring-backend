@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 public class Cinema implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +26,12 @@ public class Cinema implements Serializable {
     @OneToMany(mappedBy = "cinema")
     private List<Salle> salles = new ArrayList<>();
 
-
-
+    @Override
+    public String toString() {
+        return "Cinema{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", nombreSalle=" + nombreSalle +
+                '}';
+    }
 }

@@ -25,4 +25,13 @@ public class Salle implements Serializable {
 
     @ManyToOne
     private Cinema cinema;
+
+    @Override
+    public String toString() {
+        return "Salle{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", nombrePlaces=" + nombrePlaces +
+                '}';
+    }
 }

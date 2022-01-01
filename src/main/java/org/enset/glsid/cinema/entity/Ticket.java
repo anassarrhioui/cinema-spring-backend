@@ -10,15 +10,27 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Ticket implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
-    private String nombreClient;
-    private double prix ;
-    private int codePayement;
-    private boolean reservee ;
+    private Integer nombreClient;
+    private Double prix ;
+    private Integer codePayement;
+    private Boolean reservee ;
 
     @ManyToOne
     private Sceance sceance ;
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", nombreClient='" + nombreClient + '\'' +
+                ", prix=" + prix +
+                ", codePayement=" + codePayement +
+                ", reservee=" + reservee +
+                '}';
+    }
 }
