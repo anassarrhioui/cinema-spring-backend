@@ -2,6 +2,7 @@ package org.enset.glsid.cinema.service.implementation;
 
 import org.enset.glsid.cinema.entity.Categorie;
 import org.enset.glsid.cinema.repository.CategorieRepository;
+import org.enset.glsid.cinema.service.rmi.CategorieServiceRmi;
 import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CategorieServiceRmiImpl implements GeneriqueServiceRmi<Categorie> {
+public class CategorieServiceRmiImpl implements CategorieServiceRmi {
 
     private CategorieRepository categorieRepository;
 

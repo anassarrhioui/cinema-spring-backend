@@ -2,6 +2,7 @@ package org.enset.glsid.cinema.service.implementation;
 
 import org.enset.glsid.cinema.entity.Cinema;
 import org.enset.glsid.cinema.repository.CinemaRepository;
+import org.enset.glsid.cinema.service.rmi.CinemaServiceRmi;
 import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 @Transactional
 @Service
-public class CinemaServiceRmiImpl implements GeneriqueServiceRmi<Cinema> {
+public class CinemaServiceRmiImpl implements CinemaServiceRmi {
 
     private CinemaRepository cinemaRepository;
 
