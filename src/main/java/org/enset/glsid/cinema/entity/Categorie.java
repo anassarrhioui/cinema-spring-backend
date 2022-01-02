@@ -13,7 +13,6 @@ import java.util.*;
 @Entity
 @Builder
 public class Categorie implements Serializable {
-    final static long serialVersionUID = 12345677;
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
