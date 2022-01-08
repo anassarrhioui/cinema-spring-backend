@@ -24,11 +24,6 @@ public class Ticket implements Serializable {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "id=" + id +
-                ", nombreClient='" + nomClient + '\'' +
-                ", codePayement=" + codePayement +
-                ", reservee=" + reservee +
-                '}';
+        return "Réservé par " +nomClient;
     }
 }

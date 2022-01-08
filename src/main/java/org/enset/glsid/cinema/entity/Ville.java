@@ -23,9 +23,6 @@ public class Ville implements Serializable {
 
     @Override
     public String toString() {
-        return "Ville{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                '}';
+        return nom;
     }
 }

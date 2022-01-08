@@ -28,10 +28,6 @@ public class Cinema implements Serializable {
 
     @Override
     public String toString() {
-        return "Cinema{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", nombreSalle=" + nombreSalle +
-                '}';
+        return nom;
     }
 }

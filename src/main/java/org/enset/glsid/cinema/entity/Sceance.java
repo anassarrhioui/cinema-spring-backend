@@ -31,11 +31,6 @@ public class Sceance {
 
     @Override
     public String toString() {
-        return "Sceance{" +
-                "id=" + id +
-                ", dateSceance='" + dateSceance + '\'' +
-                ", prix=" + prix +
-                ", heureSceance='" + heureSceance + '\'' +
-                '}';
+        return dateSceance + " " + heureSceance;
     }
 }

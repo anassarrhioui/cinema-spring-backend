@@ -28,10 +28,6 @@ public class Salle implements Serializable {
 
     @Override
     public String toString() {
-        return "Salle{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", nombrePlaces=" + nombrePlaces +
-                '}';
+        return nom;
     }
 }

@@ -36,14 +36,6 @@ public class Film implements Serializable {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", titre='" + titre + '\'' +
-                ", duree=" + duree +
-                ", realisateur='" + realisateur + '\'' +
-                ", description='" + description + '\'' +
-                ", photo='" + photo + '\'' +
-                ", dateSortie='" + dateSortie + '\'' +
-                '}';
+        return titre;
     }
 }

@@ -21,9 +21,6 @@ public class Categorie implements Serializable {
 
     @Override
     public String toString() {
-        return "Categorie{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                '}';
+        return nom;
     }
 }
