@@ -15,8 +15,7 @@ public class Ticket implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
-    private Integer nombreClient;
-    private Double prix ;
+    private String nomClient;
     private Integer codePayement;
     private Boolean reservee ;
 
@@ -27,8 +26,7 @@ public class Ticket implements Serializable {
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
-                ", nombreClient='" + nombreClient + '\'' +
-                ", prix=" + prix +
+                ", nombreClient='" + nomClient + '\'' +
                 ", codePayement=" + codePayement +
                 ", reservee=" + reservee +
                 '}';

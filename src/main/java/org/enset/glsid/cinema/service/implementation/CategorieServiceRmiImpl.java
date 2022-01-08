@@ -49,4 +49,9 @@ public class CategorieServiceRmiImpl implements CategorieServiceRmi {
     public void delete(Long id) throws RemoteException {
         categorieRepository.deleteById(id);
     }
+
+    @Override
+    public List<Categorie> findAllByNomContaining(String nom) throws RemoteException{
+        return categorieRepository.findByNomContainingIgnoreCase(nom);
+    }
 }

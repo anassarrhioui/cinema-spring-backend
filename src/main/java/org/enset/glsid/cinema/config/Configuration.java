@@ -51,7 +51,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi1(CategorieServiceRmi rmiService){
+    public RmiServiceExporter getCategorieServiceRmi(CategorieServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("categorieServiceRmi");
@@ -61,7 +61,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi2(CinemaServiceRmi rmiService){
+    public RmiServiceExporter getCinemaServiceRmi(CinemaServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("cinemaServiceRmi");
@@ -71,7 +71,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi3(FilmServiceRmi rmiService){
+    public RmiServiceExporter getFilmServiceRmi(FilmServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("filmServiceRmi");
@@ -80,7 +80,7 @@ public class Configuration {
     }
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi4(SalleServiceRmi rmiService){
+    public RmiServiceExporter getSalleServiceRmi(SalleServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("salleServiceRmi");
@@ -90,7 +90,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi5(SceanceServiceRmi rmiService){
+    public RmiServiceExporter getSceanceServiceRmi(SceanceServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("sceanceServiceRmi");
@@ -100,7 +100,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi6(TicketServiceRmi rmiService){
+    public RmiServiceExporter getTicketServiceRmi(TicketServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("ticketServiceRmi");
@@ -110,7 +110,7 @@ public class Configuration {
 
     @Bean
     @Autowired
-    public RmiServiceExporter getCategorieServiceRmi7(VilleServiceRmi rmiService){
+    public RmiServiceExporter getVilleServiceRmi(VilleServiceRmi rmiService){
         RmiServiceExporter exporter = new RmiServiceExporter();
         exporter.setRegistryPort(1099);
         exporter.setServiceName("villeServiceRmi");

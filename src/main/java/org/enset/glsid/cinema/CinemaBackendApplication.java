@@ -47,7 +47,7 @@ public class CinemaBackendApplication implements CommandLineRunner {
         salleServiceRmi.insert(Salle.builder().nom("Nom salle").nombrePlaces(20).build());
         villeServiceRmi.insert(Ville.builder().nom("Nador").build());
         sceanceServiceRmi.insert(Sceance.builder().prix(12.0f).dateSceance("12/21/2020").heureSceance("12:12").build());
-        ticketServiceRmi.insert(Ticket.builder().nombreClient(12).prix(20.0).codePayement(12).reservee(true).build());
+        ticketServiceRmi.insert(Ticket.builder().nomClient("Anass Arrhioui").codePayement(12).reservee(true).build());
 
         categorieServiceRmi.findAll().forEach(System.out::println);
         cinemaServiceRmi.findAll().forEach(System.out::println);
