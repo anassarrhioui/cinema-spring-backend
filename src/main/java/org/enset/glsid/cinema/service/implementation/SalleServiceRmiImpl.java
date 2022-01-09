@@ -1,5 +1,6 @@
 package org.enset.glsid.cinema.service.implementation;
 
+import org.enset.glsid.cinema.entity.Cinema;
 import org.enset.glsid.cinema.entity.Salle;
 import org.enset.glsid.cinema.repository.SalleRepository;
 import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
@@ -31,6 +32,7 @@ public class SalleServiceRmiImpl implements SalleServiceRmi {
 
     @Override
     public List<Salle> findAll() throws RemoteException {
+        System.out.println("All");
         return salleRepository.findAll();
     }
 
@@ -47,5 +49,15 @@ public class SalleServiceRmiImpl implements SalleServiceRmi {
     @Override
     public void delete(Long id) throws RemoteException {
         salleRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Salle> findBySalleByCinema(Cinema cinema) throws RemoteException{
+        return salleRepository.findSalleByCinema(cinema);
+    }
+
+    @Override
+    public List<Salle> findAllByNomContaining(String mc) throws RemoteException {
+        return salleRepository.findAllByNomContaining(mc);
     }
 }

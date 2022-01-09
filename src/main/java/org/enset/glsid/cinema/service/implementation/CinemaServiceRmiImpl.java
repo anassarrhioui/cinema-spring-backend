@@ -54,4 +54,9 @@ public class CinemaServiceRmiImpl implements CinemaServiceRmi {
     public List<Cinema> findCinemaByVille(Ville v) {
         return cinemaRepository.findCinemaByVille(v);
     }
+
+    @Override
+    public List<Cinema> findAllByNomContaining(String mc) throws RemoteException {
+        return cinemaRepository.findAllByNomContaining(mc);
+    }
 }

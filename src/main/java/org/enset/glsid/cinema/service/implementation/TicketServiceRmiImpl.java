@@ -48,4 +48,9 @@ public class TicketServiceRmiImpl implements TicketServiceRmi {
     public void delete(Long id) throws RemoteException {
         ticketRepository.deleteById(id);
     }
+
+    @Override
+    public List<Ticket> findAllByNomClientContaining(String mc) throws RemoteException {
+        return ticketRepository.findAllByNomClientContaining(mc);
+    }
 }

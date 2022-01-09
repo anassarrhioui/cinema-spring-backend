@@ -48,4 +48,9 @@ public class SceanceServiceRmiImpl implements SceanceServiceRmi {
     public void delete(Long id) throws RemoteException {
         sceanceRepository.deleteById(id);
     }
+
+    @Override
+    public List<Sceance> findAllByFilmContaining(String mc) throws RemoteException {
+        return sceanceRepository.findAllByFilmTitreContaining(mc);
+    }
 }

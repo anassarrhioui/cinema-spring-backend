@@ -49,4 +49,9 @@ public class FilmServiceRmiImpl implements FilmServiceRmi {
     public void delete(Long id) throws RemoteException {
         filmRepository.deleteById(id);
     }
+
+    @Override
+    public List<Film> findAllByTitreContaining(String mc) throws RemoteException {
+        return filmRepository.findAllByTitreContaining(mc);
+    }
 }

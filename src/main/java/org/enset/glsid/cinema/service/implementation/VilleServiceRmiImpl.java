@@ -47,4 +47,9 @@ public class VilleServiceRmiImpl implements VilleServiceRmi {
     public void delete(Long id) throws RemoteException {
         villeRepository.deleteById(id);
     }
+
+    @Override
+    public List<Ville> findAllByNomContaining(String mc) throws RemoteException {
+        return villeRepository.findAllByNomContaining(mc);
+    }
 }
