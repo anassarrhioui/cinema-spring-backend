@@ -41,7 +41,7 @@ public class CinemaBackendApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
- /*       categorieServiceRmi.insert(Categorie.builder().nom("Test2").build());
+       categorieServiceRmi.insert(Categorie.builder().nom("Test2").build());
         cinemaServiceRmi.insert(Cinema.builder().nom("Nom cine").nombreSalle(10).build());
         Film f = filmServiceRmi.insert(Film.builder().duree(123.0).dateSortie("2021-21-22").description("Hello world").photo("link").realisateur("Ana").build());
         Salle s = salleServiceRmi.insert(Salle.builder().nom("Nom salle").nombrePlaces(20).build());
@@ -59,7 +59,7 @@ public class CinemaBackendApplication implements CommandLineRunner {
         salleServiceRmi.findAll().forEach(System.out::println);
         villeServiceRmi.findAll().forEach(System.out::println);
         sceanceServiceRmi.findAll().forEach(System.out::println);
-        ticketServiceRmi.findAll().forEach(System.out::println);*/
+        ticketServiceRmi.findAll().forEach(System.out::println);
 
 
     }

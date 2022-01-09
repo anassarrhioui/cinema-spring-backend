@@ -1,5 +1,6 @@
 package org.enset.glsid.cinema.service.implementation;
 
+import org.enset.glsid.cinema.entity.Salle;
 import org.enset.glsid.cinema.entity.Sceance;
 import org.enset.glsid.cinema.repository.SceanceRepository;
 import org.enset.glsid.cinema.service.rmi.SceanceServiceRmi;
@@ -52,5 +53,10 @@ public class SceanceServiceRmiImpl implements SceanceServiceRmi {
     @Override
     public List<Sceance> findAllByFilmContaining(String mc) throws RemoteException {
         return sceanceRepository.findAllByFilmTitreContaining(mc);
+    }
+
+    @Override
+    public List<Sceance> findSceanceBySalle(Salle salle) throws RemoteException {
+        return sceanceRepository.findSceanceBySalle(salle);
     }
 }

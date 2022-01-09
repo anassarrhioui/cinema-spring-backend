@@ -1,5 +1,7 @@
 package org.enset.glsid.cinema.service.implementation;
 
+import org.enset.glsid.cinema.entity.Salle;
+import org.enset.glsid.cinema.entity.Sceance;
 import org.enset.glsid.cinema.entity.Ticket;
 import org.enset.glsid.cinema.repository.TicketRepository;
 import org.enset.glsid.cinema.service.rmi.TicketServiceRmi;
@@ -53,4 +55,6 @@ public class TicketServiceRmiImpl implements TicketServiceRmi {
     public List<Ticket> findAllByNomClientContaining(String mc) throws RemoteException {
         return ticketRepository.findAllByNomClientContaining(mc);
     }
+
+
 }
