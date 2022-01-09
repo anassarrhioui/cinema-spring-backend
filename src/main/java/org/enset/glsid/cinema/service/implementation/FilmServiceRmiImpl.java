@@ -41,7 +41,8 @@ public class FilmServiceRmiImpl implements FilmServiceRmi {
 
     @Override
     public Film update(Film object) throws RemoteException {
-        return update(object);
+        System.out.println(object);
+        return filmRepository.save(object);
     }
 
     @Override

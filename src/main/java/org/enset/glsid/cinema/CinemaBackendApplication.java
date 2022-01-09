@@ -46,6 +46,10 @@ public class CinemaBackendApplication implements CommandLineRunner {
         filmServiceRmi.insert(Film.builder().duree(123.0).dateSortie("2021-21-22").description("Hello world").photo("link").realisateur("Ana").build());
         salleServiceRmi.insert(Salle.builder().nom("Nom salle").nombrePlaces(20).build());
         villeServiceRmi.insert(Ville.builder().nom("Nador").build());
+        villeServiceRmi.insert(Ville.builder().nom("Oujda").build());
+        villeServiceRmi.insert(Ville.builder().nom("Mohammedia").build());
+        villeServiceRmi.insert(Ville.builder().nom("Casablanca").build());
+
         sceanceServiceRmi.insert(Sceance.builder().prix(12.0f).dateSceance("12/21/2020").heureSceance("12:12").build());
         ticketServiceRmi.insert(Ticket.builder().nomClient("Anass Arrhioui").codePayement(12).reservee(true).build());
 

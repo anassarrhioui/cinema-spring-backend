@@ -1,6 +1,7 @@
 package org.enset.glsid.cinema.service.implementation;
 
 import org.enset.glsid.cinema.entity.Cinema;
+import org.enset.glsid.cinema.entity.Ville;
 import org.enset.glsid.cinema.repository.CinemaRepository;
 import org.enset.glsid.cinema.service.rmi.CinemaServiceRmi;
 import org.enset.glsid.cinema.service.rmi.GeneriqueServiceRmi;
@@ -47,5 +48,10 @@ public class CinemaServiceRmiImpl implements CinemaServiceRmi {
     @Override
     public void delete(Long id) throws RemoteException {
          cinemaRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Cinema> findCinemaByVille(Ville v) {
+        return cinemaRepository.findCinemaByVille(v);
     }
 }
